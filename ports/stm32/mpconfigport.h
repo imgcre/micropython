@@ -31,6 +31,15 @@
 #include "mpconfigboard.h"
 #include "mpconfigboard_common.h"
 
+//我添加的:
+#define MICROPY_PY_THREAD (1)  //提供多线程支持
+#define MICROPY_MODULE_GETATTR (1) //模块级getattr魔术方法
+//#define MICROPY_PY_FUNCTION_ATTRS (1) //函数属性添加支持, 原代码已定义
+//#define MICROPY_PY_DESCRIPTORS (1) //描述器支持, 原代码已定义
+//#define MICROPY_PY_DELATTR_SETATTR (1) //setter魔术方法支持, 原代码已定义
+//#define MICROPY_PY_ALL_SPECIAL_METHODS (1) //所有魔术方法支持, 原代码已定义
+
+
 // memory allocation policies
 #ifndef MICROPY_GC_STACK_ENTRY_TYPE
 #if MICROPY_HW_SDRAM_SIZE
